@@ -21,8 +21,8 @@ public class signup extends HttpServlet
     String Em = req.getParameter("youremail");
     String Ps = req.getParameter("yourpassword");
                 
-    // <!doctype html> is not needed
     req.getRequestDispatcher("signup.html").include(req, res);
+    //verifies that all fields are filled
     if(Nm.isEmpty() || Em.isEmpty() || Ps.isEmpty()){
     	out.print("<center>");
     	out.print("<font color=red>");
@@ -30,6 +30,7 @@ public class signup extends HttpServlet
     	out.print("</font>");
     	out.print("</center>");
     }
+    //notifies that user has been signed in
     else{
     	out.print("<center>");
     	out.print("Welcome to Quantbase! Sign into your account!");

@@ -13,6 +13,7 @@ public class logout extends HttpServlet
 {
  protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
  {
+	 //quits HttpSession object
      res.setContentType("text/html");  
      PrintWriter out=res.getWriter();    
      req.getRequestDispatcher("empty.html").include(req, res);    

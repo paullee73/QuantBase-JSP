@@ -13,15 +13,15 @@ public class exchange extends HttpServlet
 {
  protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
  {
+	 //generate exchange.html if signed in
     res.setContentType ("text/html");
     PrintWriter out = res.getWriter ();    
     HttpSession session=req.getSession(false); 
     if(session!=null){
     	req.getRequestDispatcher("exchange.html").include(req, res);
-    	  
-    	
     }  
     else{  
+    	//tell user he/she needs to sign in to access exchange.
         req.getRequestDispatcher("empty.html").include(req, res);
         out.print("</br>");
         out.print("</br>");

@@ -23,6 +23,7 @@ public class login extends HttpServlet
     out.print("<br/>");
     out.print("<br/>");
     out.print("<br/>");
+    //welcome user if credentials match to special key
     req.getRequestDispatcher("login.html").include(req, res); 
     if(Un.equals("admin123") && Ps.equals("admin123")){
     	out.print("<center>");
@@ -30,7 +31,8 @@ public class login extends HttpServlet
     	out.println("</center>");
         HttpSession session=req.getSession();  
         session.setAttribute("name", Un); 
-    }  
+    }
+    //warn user if a field is not filled
     else if(Un.isEmpty() || Ps.isEmpty()){
     	out.print("<center>");
     	out.print("<font color=red>");
@@ -38,10 +40,11 @@ public class login extends HttpServlet
         out.print("</font>");
         out.print("</center>");       
     }
+    //warn user that password or email is not correct
     else{
     	out.print("<center>");
     	out.print("<font color=red>");
-        out.print("Email/password is not correct");  
+        out.print("Username/password is not correct");  
         out.print("</font>");
         out.print("</center>");
     }
