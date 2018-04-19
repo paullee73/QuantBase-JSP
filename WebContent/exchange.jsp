@@ -39,59 +39,15 @@
             };
         });
     </script>
-    <script>
-        function removeRow(num) {
-            var rowName = "row" + num;
-            document.getElementById(rowName).style.display = "none";
-        }
-    </script>
     <title>Quantbase</title>
 </head>
 
 <body>
     <!-- navigation bar -->
-    <header>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">QuantBase</a>
-                </div>
-                <!-- elements in navbar to collapse into button -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="exchange">Exchange</a>
-                        </li>
-                        <li>
-                            <a href="portfolio">Portfolio</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="signup.html">
-                                <span class="glyphicon glyphicon-user"></span> Sign Up</a>
-                        </li>
-                        <li>
-                            <a href="login.html">
-                                <span class="glyphicon glyphicon-log-in"></span> Login</a>
-                        </li>
-                        <li>
-                        	<a href="logout">
-                            	<span class="glyphicon glyphicon-log-out" ></span> Logout</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <%@ include file="header.jsp" %>
     <div class="container" style="padding-top: 60px">
+        <h2>Trending</h2>
+        <p>Here are the current top trending stocks available!</p>
         <table class="table">
             <thead>
                 <tr>
@@ -102,60 +58,55 @@
                 </tr>
             </thead>
             <tbody>
-                <tr id="row1">
+                <tr>
                     <td>
+                        <!-- image for stock1 -->
                         <img class="icons" src="google.png" alt="Google">
                     </td>
+                    <!-- add the information for stock1 -->
                     <td id="stock1"></td>
                     <td id="ema1"></td>
                     <td id="date1"></td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-md" onClick="removeRow(1)">Remove</button>
-                    </td>
                 </tr>
-                <tr id="row2">
+                <tr>
                     <td>
+                        <!-- add image of stock2 -->
                         <img class="icons" src="amazon.png" alt="Amazon">
                     </td>
+                    <!-- add information for stock 2 -->
                     <td id="stock2"></td>
                     <td id="ema2"></td>
                     <td id="date2"></td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-md" onClick="removeRow(2)">Remove</button>
-                    </td>
                 </tr>
-                <tr id="row3">
+                <tr>
                     <td>
+                        <!-- image for stock3 -->
                         <img class="icons" src="facebook.png" alt="Facebook">
                     </td>
+                    <!-- information for stock3 -->
                     <td id="stock3"></td>
                     <td id="ema3"></td>
                     <td id="date3"></td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-md" onClick="removeRow(3)">Remove</button>
-                    </td>
                 </tr>
-                <tr id="row4">
+                <tr>
                     <td>
+                        <!-- image for stock4 -->
                         <img class="icons" src="microsoft.png" alt="Microsoft">
                     </td>
+                    <!-- information for stock4 -->
                     <td id="stock4"></td>
                     <td id="ema4"></td>
                     <td id="date4"></td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-md" onClick="removeRow(4)">Remove</button>
-                    </td>
                 </tr>
-                <tr id="row5">
+                <tr>
                     <td>
+                        <!-- image for stock5 -->
                         <img class="icons" src="twitter.png" alt="Twitter">
                     </td>
+                    <!-- information for stock5 -->
                     <td id="stock5"></td>
                     <td id="ema5"></td>
                     <td id="date5"></td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-md" onClick="removeRow(5)">Remove</button>
-                    </td>
                 </tr>
             </tbody>
         </table>
@@ -164,14 +115,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-<footer class="footer">
-    <div class="container" id="footer">
-        <small>
-            <center>
-                Copyright © 2017 QuantBase Technologies
-            </center>
-        </small>
-    </div>
-</footer>
+<%@ include file="footer.jsp" %>
 
 </html>

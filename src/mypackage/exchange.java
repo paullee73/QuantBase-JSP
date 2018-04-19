@@ -18,11 +18,11 @@ public class exchange extends HttpServlet
     PrintWriter out = res.getWriter ();    
     HttpSession session=req.getSession(false); 
     if(session!=null){
-    	req.getRequestDispatcher("exchange.html").include(req, res);
+    	req.getRequestDispatcher("exchange.jsp").include(req, res);
     }  
     else{  
     	//tell user he/she needs to sign in to access exchange.
-        req.getRequestDispatcher("empty.html").include(req, res);
+        req.getRequestDispatcher("empty.jsp").include(req, res);
         out.print("</br>");
         out.print("</br>");
         out.print("</br>");

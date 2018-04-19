@@ -18,11 +18,11 @@ public class portfolio extends HttpServlet
     HttpSession session=req.getSession(false); 
     //generate portfolio.html if user is signed in
     if(session!=null){
-    	req.getRequestDispatcher("portfolio.html").include(req, res);
+    	req.getRequestDispatcher("portfolio.jsp").include(req, res);
     }
     //warn user that he/she must be signed in to access portfolio
     else{  
-        req.getRequestDispatcher("empty.html").include(req, res);
+        req.getRequestDispatcher("empty.jsp").include(req, res);
         out.print("</br>");
         out.print("</br>");
         out.print("</br>");

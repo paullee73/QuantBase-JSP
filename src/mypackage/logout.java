@@ -16,7 +16,7 @@ public class logout extends HttpServlet
 	 //quits HttpSession object
      res.setContentType("text/html");  
      PrintWriter out=res.getWriter();    
-     req.getRequestDispatcher("empty.html").include(req, res);    
+     req.getRequestDispatcher("empty.jsp").include(req, res);    
      HttpSession session=req.getSession();  
      session.invalidate();
      out.print("</br>");

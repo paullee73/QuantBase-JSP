@@ -24,7 +24,7 @@ public class login extends HttpServlet
     out.print("<br/>");
     out.print("<br/>");
     //welcome user if credentials match to special key
-    req.getRequestDispatcher("login.html").include(req, res); 
+    req.getRequestDispatcher("login.jsp").include(req, res); 
     if(Un.equals("admin123") && Ps.equals("admin123")){
     	out.print("<center>");
     	out.print("Welcome!");

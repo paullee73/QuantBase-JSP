@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- addin jQuery to the file -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <title>Quantbase</title>
-</head>
-
-<body>
-    <!-- navigation bar -->
     <header>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -24,7 +9,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">QuantBase</a>
+                    <a class="navbar-brand" href="index.jsp">QuantBase</a>
                 </div>
                 <!-- elements in navbar to collapse into button -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,13 +21,13 @@
                             <a href="portfolio">Portfolio</a>
                         </li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" id="top-right">
                         <li>
-                            <a href="signup.html">
+                            <a href="signup.jsp">
                                 <span class="glyphicon glyphicon-user"></span> Sign Up</a>
                         </li>
                         <li>
-                            <a href="login.html">
+                            <a href="login.jsp">
                                 <span class="glyphicon glyphicon-log-in"></span> Login</a>
                         </li>
                         <li>
@@ -54,17 +39,3 @@
             </div>
         </nav>
     </header>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-<footer class="footer">
-    <div class="container" id="footer">
-        <small>
-            <center>
-                Copyright © 2017 QuantBase Technologies
-            </center>
-        </small>
-    </div>
-</footer>
-
-</html>
